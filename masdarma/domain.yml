@@ -1,0 +1,321 @@
+version: "2.0"
+
+intents:
+  - greet:
+      use_entities: []
+  - goodbye:
+      use_entities: []
+  - mood_great:
+      use_entities: []
+  - mood_unhappy:
+      use_entities: []
+  - bot_challenge:
+      use_entities: []
+  - baak :
+      use_entities: []
+  - baak_administrasi_akademik:
+      use_entities: []
+  - baak_berita:
+      use_entities: []
+  - baak_cari_mhs:
+      use_entities: []
+  - baak_pedoman:
+      use_entities: []
+  - baak_perkuliahan_ujian:
+      use_entities: []
+  - baak_cari_kelas_baru:
+      use_entities: []
+  - baak_info_update:
+      use_entities: []
+  - sap :
+      use_entities: []
+  - sap_cari:
+      use_entities: []
+  - daftar_sap:
+      use_entities: []
+  - staffsite:
+      use_entities: []
+  - studentsite:
+      use_entities: []
+  - studentsite_aktivasi:
+      use_entities: []
+  - web_ug:
+      use_entities: []
+  - link_web:
+      use_entities: []
+  - library:
+      use_entities: []
+  - vclass:
+      use_entities: []
+  - loket23:
+      use_entities: []
+  - pertanyaan_skripsi_kompre_proposal:
+      use_entities: []
+  - kemahasiswaan:
+      use_entities: []
+  - praktikum:
+      use_entities: []
+  - diluar_topik:
+      use_entities: []
+  - topik_kemahasiswaan:
+      use_entities: []
+  - pertanyaan_skripsi_proposal:
+      use_entities: []
+  - pertanyaan_kompre:
+      use_entities: []
+  - input_nama:
+      use_entities: 
+        - nama_dosen
+  - studentsite_berita:
+      use_entities: []
+
+
+entities:
+  - nama_dosen
+
+actions:
+  - action_topik_kemahasiswaan
+  - action_berita_baak
+  - action_staffsite
+  - action_baak_akademik
+  - action_studentsite
+
+
+responses:
+  utter_greet:
+  - text: "Halo! Apakah ada yang ingin kamu tanyakan?"
+
+  utter_baak:
+  - text: "BAAK jika diambil pengertiannya langsung dari situs webnya adalah sebuah biro yang menangani segala sesuatu yang berkaitan dengan penyelenggaraan kegiatan belajar mengajar dan administrasi akademik bagi seluruh mahasiswa Universitas Gunadarma. 
+  \nUntuk menuju ke situs web BAAK berikut ini [linknya](https://baak.gunadarma.ac.id/)"
+    image: "https://drive.google.com/uc?id=193EWvIZT-ROK9lRzPRloj1ruFdvd106s"
+
+
+  utter_baak_perkuliahan_ujian :
+  - text: "Untuk topik mengenai perkuliahan dan ujian kamu akan mendapatkan informasi lebih di situs web BAAK. 
+  \nBerikut ini daftar artikel yang bisa kamu baca : 
+    \n- Kalender akademik - Cek kegiatan perkuliahanmu [disini](https://baak.gunadarma.ac.id/#)
+    \n- Daftar mata kuliah 
+    \n- Daftar dosen wali kelas 
+    \n- Koordinator mata kuliah
+    \n- Daftar dosen pembimbing pi 
+    \n- Cari jadwal kuliah
+    \n- Cari jadwal ujian 
+    \n- Pengurusan ujian bentrok
+    \n- Formulir rencana studi
+  \nSilahkan masuk ke link [website](https://baak.gunadarma.ac.id/kuliahUjian/1#) ya!"
+    image : "https://drive.google.com/uc?id=1Px9gvMdnbhCcYxqdacK1mPB2vn6yjpy0"
+
+
+  utter_baak_pedoman : 
+  - text: "Untuk buku pedoman kamu atau materi PPSPPT Universitas Gunadarma,
+   kamu bisa baca di link [website ini yaa](https://baak.gunadarma.ac.id/buku_pedoman)!"
+
+  utter_baak_cari_mhs :
+  - text: "Kamu mahasiswa baru? Selamat datang ya di Universitas Gunadarma! Untuk mencari data mahasiswa baru 
+  bisa dicari berdasarkan nama dan kelas di [alamat link ini](https://baak.gunadarma.ac.id/cariMhsBaru) ya! "
+
+  utter_baak_cari_kelas_baru :
+  - text: "Wah, kamu udah naik tingkat ke kelas dua yaa? Mantap, kelasnya baru nihh, dapet teman baru juga ya. 
+  Untuk mencari kelas baru kamu bisa cari melalui nama dan NPM di [alamat link ini](https://baak.gunadarma.ac.id/cariKelasBaru) ya! "
+  
+  utter_baak_info_update :
+  - text: "Untuk informasi mengenai sidang Sarjana (S1) maupun Diploma (D3), dapat 
+  kamu akses di [website ini](https://baak.gunadarma.ac.id/sidang/) ya! "
+    image: "https://drive.google.com/uc?id=1NFRMv4EkVvh070p1Z729LtGT_cz_lueR"
+
+  utter_sap:
+  - text: "Satuan Acara Perkuliahan (SAP) merupakan proyeksi kegiatan atau aktivitas yang akan dilakukan oleh dosen dalam perkuliahan.\n
+  Kamu bisa mencari informasi mengenai SAP di [link ini](https://sap.gunadarma.ac.id/) ya! "
+
+  utter_sap_cari :
+  - text: "Untuk mencari SAP dari mata kuliah yang kamu butuhkan, 
+  kamu bisa akses ke alamat [link ini](https://sap.gunadarma.ac.id/searchsap) yaa! "
+
+  utter_daftar_sap :
+  - text: "Untuk mencari SAP berdasarkan jurusan, kamu bisa lihat daftarnya di [link website ini](https://sap.gunadarma.ac.id/daftarsap) ya! "
+
+  utter_staffsite :
+  - text: "Untuk mencari nama dosen dan staff di Universitas Gunadarma, kita bisa akses di [Staffsite](http://staffsite.gunadarma.ac.id/). 
+        Kira-kira siapa nama dosen yang kamu cari? "
+
+  utter_studentsite :
+  - text: "Untuk masuk ke loker mahasiswa UG, kamu bisa akses ke [link ini](https://studentsite.gunadarma.ac.id/index.php/site/index) ya!  
+    \nSetelah kamu login di StudentSite, kamu bisa mengakses banyak fitur seperti berikut : 
+      \n- [Berita terkini untuk mahasiswa](https://studentsite.gunadarma.ac.id/index.php/site/news)
+      \n- [Daftar sidang] (https://studentsite.gunadarma.ac.id/index.php/sidang/index)
+      \n- [Daftar ulang] (https://studentsite.gunadarma.ac.id/index.php/daful/index)
+      \n- [Membuat surat keterangan] (https://studentsite.gunadarma.ac.id/index.php/surket/index)
+      \n- [Membuat blog] (https://studentsite.gunadarma.ac.id/index.php/default/index#)
+      \n- [Membuat portofolio] (https://studentsite.gunadarma.ac.id/index.php/default/index#)
+      \n- [Mengakses SKPI] (https://studentsite.gunadarma.ac.id/index.php/skpi/index)
+      \n- [Mengakses blanko pembayaran] (https://studentsite.gunadarma.ac.id/index.php/blanko/index)
+      \n- [Mengisi KRS] (https://studentsite.gunadarma.ac.id/index.php/krs2/index)
+      \n- [Informasi akademik] (https://studentsite.gunadarma.ac.id/index.php/akademik/index) - Nilai Mahasiswa, PI, Skripsi, dll.
+      \n- [Informasi kampus] (https://studentsite.gunadarma.ac.id/index.php/info/index)
+      \n- [Mengubah biodata] (https://studentsite.gunadarma.ac.id/index.php/foto/index)"
+
+  utter_studentsite_aktivasi :
+  - text: "Jika kamu mahasiswa baru dan ingin mengaktivasi akun StudentSite-mu, kamu bisa langsung akses [disini](https://studentsite.gunadarma.ac.id/index.php/aktivasi/index) ya!"
+
+  utter_web_ug :
+  - text: "Informasi mengenai Universitas Gunadarma dapat kamu akses ke situs resminya ya, disana kamu bisa 
+    melihat informasi seperti : 
+    \n- [Sambutan Rektor] (https://gunadarma.ac.id/Sambutan)
+    \n- [Sejarah] (https://gunadarma.ac.id/sejarah)
+    \n- [Struktur Organisasi] (https://gunadarma.ac.id/struktur )
+    \n- [Visi dan Misi] (https://gunadarma.ac.id/visi)
+    \n- [Lokasi Kampus] (https://gunadarma.ac.id/lokasi)
+    \n- [Direktori Situs Layanan Resmi Milik UG] (https://gunadarma.ac.id/services)
+    
+    \nUntuk mencari informasi lengkap mengenai Universitas Gunadarma, kamu bisa cek 
+    di situs resmi Universitas Gunadarma dengan akses ke [link ini](https://www.gunadarma.ac.id/) untuk masuk ke berandanya ya! "
+
+  utter_link_web :
+  - text: "Untuk informasi layanan yang ada di Gunadarma, kamu bisa akses situs-situs web berikut ini:
+    \n- [StudentSite] (https://studentsite.gunadarma.ac.id/index.php/site/index)
+    \n- [BAAK] (https://baak.gunadarma.ac.id/)
+    \n- [KEMAHASISWAAN] (https://kemahasiswaan.gunadarma.ac.id/)
+    \n- [SIDANG] (https://baak.gunadarma.ac.id/sidang/)
+    \n- [PENULISAN ILMIAH FIKTI] (https://baak.gunadarma.ac.id/infopi/)
+    \n- [UGPEDIA / FAQ BAAK] (http://ugpedia.gunadarma.ac.id/category/54/baak.html)
+    \n- [GUNADARMA] (https://gunadarma.ac.id/)
+    \n- [LIBRARY](https://library.gunadarma.ac.id/)
+    \n- [CAREER CENTER](http://career.gunadarma.ac.id/)
+    \n- [REPOSITORY] (http://repository.gunadarma.ac.id/)
+    \n- [LEMBAGA PENELITIAN UG] (https://penelitian.gunadarma.ac.id/)
+    \n- [BADAN PENJAMINAN MUTU] (https://spma.gunadarma.ac.id/)
+    \n- [E-JOURNAL UG] (https://ejournal.gunadarma.ac.id/)
+    \n- [SAP] (https://sap.gunadarma.ac.id/)"
+    image: "https://drive.google.com/uc?id=1s8Cddsd4aglfY-Ra3x7BeJjnVsz_bJGR"
+
+  utter_library :
+  - text: "Untuk informasi seputar perpustakaan di Universitas Gunadarma, kamu bisa akses ke halaman [link ini](https://library.gunadarma.ac.id/) ya! "
+    image: "https://drive.google.com/uc?id=1gsCyCaq863v8Zu8fmqjXAty8SMLOjuL2"
+
+  utter_vclass :
+  - text: "VClass merupakan situs dimana mahasiswa dapat melaksanakan kelas virtual. 
+    Untuk mengaksesnya kamu dapat login menggunakan email studentsite yang berakhiran @student.gunadarma.ac.id. 
+    \nKlik halaman link akses ke [VClass](https://v-class.gunadarma.ac.id/)!"
+    image: "https://drive.google.com/uc?id=1j0l1KGQCM6OTKIdYaxqs-VFkN4nlvTg2"
+
+  utter_kemahasiswaan :
+  - text: "Untuk topik tersebut kamu dapat temukan di situs kemahasiswaan. Silahkan akses ke [link website ini](https://kemahasiswaan.gunadarma.ac.id/) ya!
+    \n Terdapat beberapa kategori yang bisa kamu temukan di situs tersebut, diantara lain:
+    \n- [Beasiswa] (https://kemahasiswaan.gunadarma.ac.id/category/berita/beasiswa/)
+    \n- [Berita] (https://kemahasiswaan.gunadarma.ac.id/category/berita/)
+    \n- [Prestasi Ilmiah] (https://kemahasiswaan.gunadarma.ac.id/category/berita/prestasi-ilmiah/)
+    \n- [Prestasi Olahraga] (https://kemahasiswaan.gunadarma.ac.id/category/berita/prestasi-olahraga/)
+    \n- [Bidikmisi] (https://kemahasiswaan.gunadarma.ac.id/category/bidikmisi/)
+    \n- [Internasional] (https://kemahasiswaan.gunadarma.ac.id/category/internasional/)
+    \n- [Kegiatan] (https://kemahasiswaan.gunadarma.ac.id/category/kegiatan/)
+    \n- [Lomba](https://kemahasiswaan.gunadarma.ac.id/category/lomba/)
+
+    \n Topik apa yang ingin kamu ketahui?"
+
+  utter_topik_kemahasiswaan :
+  - text: "Sebentar ya, saya carikan informasinya dulu."
+
+  utter_praktikum :
+  - text: "Untuk mahasiswa yang membutuhkan informasi mengenai praktikum, kalian bisa bertanya ke wali kelas masing-masing, 
+    untuk mengecek siapa wali kelas kalian klik di [link website ini](https://baak.gunadarma.ac.id/kuliahUjian/3). 
+    Praktikum terbagi beberapa jenis : 
+    \n1. [Praktikum iLab] (http://ilab.gunadarma.ac.id/)
+    \n2. [Praktikum Reguler] (http://ilab.gunadarma.ac.id/?page_id=696)
+    \n3. [Praktikum Mata Kuliah/Jurusan] (Informasi akan diberikan kepada ketua kelasnya masing-masing)
+    \n Selama masa pandemi, situs web untuk pengerjaan 
+    praktikum dapat diakses [disini](https://praktikum.gunadarma.ac.id/)."
+    image: "https://drive.google.com/uc?id=1CkOUdrJ2GnlO_88HK9RAlwhhLxKXI0w0"
+
+  utter_loket23 : 
+  - text: "Informasi mengenai Lembaga Pengembangan UG dapat kamu akses melalui akun instagram [@loket23depok](https://www.instagram.com/loket23depok/). 
+      \nDisana kamu akan mendapatkan banyak informasi mengenai kursus dan workshop yang diadakan oleh LPUG. Pada Highlight Story yang Staff LPUG buat pun, kamu dapat membaca banyak QnA serta tata
+      cara dalam mendaftarkan diri untuk mengikuti kursus dan workshop yang digunakan untuk syarat sidang."
+    image: "https://drive.google.com/uc?id=1SkSQid_97vnBPeAmIrPGjhRj1fktGno_" 
+    
+  utter_pertanyaan_skripsi_proposal :
+  - text: "Berikut ini terdapat QnA dari pertanyaan-pertanyaan seputar skripsi dan pengajuan proposal. Sumber jawaban dari Bu Hurnaningsih, 
+    Post QnA dapat diakses di [link ini] (http://ugpedia.gunadarma.ac.id/content/72/3901/id/pertanyaan-seputar-skripsi-proposal-dan-sidang-kompre.html).
+    \nQnA : 
+
+    \n- Apa syarat mendapatkan SK Skripsi?
+    \nIPK total sampai dengan semester 6 atau sampai batas tanggal pengajuan ke sektor >= 3,25
+
+    \n- Kemana melapor apabila setelah sidang skripsi ada perubahan judul?
+    \nSaat masih di Universitas Gunadarma region Kenari, silahkan langsung melapor ke bagian sidang sarjana 
+
+    \n- Kemana melapor apabila setelah mengambil ijazah ada kesalahan penulisan judul?
+    \nSilahkan langsung melapor ke bagian transkrip di gedung 2 lantai 1 Depok BUKAN di Jurusan
+
+    \n- Kalau pernah UM (Ujian Mandiri), apakah bisa mendapatkan SK Skripsi?
+    \nBisa. Mulai sekarang untuk mendapatkan SK skripsi tidak harus didasarkan pada nilai IPK murni
+
+    \n- Apabila sudah memenuhi syarat skripsi, sebelum SK turun boleh tidak mhs memilih/menentukan Dosen Pembimbingnya?
+    \nTidak boleh karena bagi yang mendapatkan SK Skripsi maka Dosen Pembimbingnya secara otomatis sudah ditentukan oleh pihak kampus.
+    \nTetapi apabila ada Dosen yang menghendakinya untuk membimbing silahkan Dosen tersebut langsung melapor ke ketua jurusannya.
+
+    \n- Kapan SK Skripsi turun?
+    \nNanti akan diumumkan lewat grup WhatsApp, isi anggota grup WhatsApp akan dibentuk berdasarkan perwakilan kelas masing-masing. 
+
+    \n- Bolehkah pindah Dosen Pembimbing?
+    \nTidak boleh.
+
+    \n- Bolehkah mengerjakan Skripsi secara kelompok dan bagaimana dengan materinya
+    \nKebijakan sepenuhnya ditentukan oleh Dosen Pembimbing saudara.
+
+    \n- Bolehkah menolak skripsi di semester 8
+    \nTidak boleh.
+
+    \n- Apa yang dimaksud dengan skripsi, proposal dan komprehensif? Apakah nantinya akan ada perbedaan antara mahasiswa yang lulus komprehensif dan lulus skripsi?
+    \nSkripsi dosen pembimbingnya didasarkan pada SK. Sedangkan proposal dosen pembimbingnya boleh pilih sendiri. Masing-masing mempunyai bobot 6 SKS. Sedangkan kompre bobot 6 SKS nya diambil dari peleburan 3 matakuliah dan untuk sidangnya diuji 3 matakuliah yang pernah diambil di sem 8
+    \nUntuk kelulusannya di ijazah tidak ada bedanya bahkan bagi yang pernah UM pun di transkrip nilai juga tidak diberi tanda.
+    \nWaktu melamar kerja juga tidak dibedakan yang penting saudara punya kemampuan
+    
+    \n- Apa yang dapat dilakukan ketika ingin ambil Skripsi tetapi IPK belum mencukupi persyaratan?
+    \nBisa mengajukan proposal dengan perbaikan IPK lewat UM dahulu hingga mencapai >= 3,00
+
+    \n- Dimana memperoleh form acc skripsi
+    \nSilahkan download [disini](http://hurna.staff.gunadarma.ac.id/Downloads) > Pilih 'Pelayanan Jurusan' dengan nama file 'Form acc skripsi'
+
+    \n- Bagaimana cara mengajukan proposal skripsi?
+    \nInformasi berikut tentang Tema dan Ketentuan pengajuan Proposal maupun format penulisan skripsi. Silahkan download [disini](http://hurna.staff.gunadarma.ac.id) > Pilih 'Pelayanan Jurusan' > Pilih title 'Proposal Skripsi'
+
+    \n- Bagaimana cara mengajukan proposal dan kapan batas terakhirnya?
+    \nSilahkan menghubungi langsung ke Ketua Jurusan masing-masing."
+
+  utter_pertanyaan_kompre:
+  - text: "Berikut ini terdapat QnA dari pertanyaan-pertanyaan seputar sidang komprehensif. Sumber jawaban dari Bu Hurnaningsih, 
+    Post QnA dapat diakses di [link ini] (http://ugpedia.gunadarma.ac.id/content/72/3901/id/pertanyaan-seputar-skripsi-proposal-dan-sidang-kompre.html).
+    \nQnA : 
+
+    \n- Kapan bisa pindah kompre bila tidak sanggup melanjutkan skripsi atau di semester 8 belum di acc?
+    \nMengingat SK skripsi itu berlaku 6 bulan maka di awal semester 9 boleh pindah ke sidang kompre asal sudah memenuhi syarat.
+
+    \n- Apakah kalau lulus kompre bisa meneruskan S2?
+    \nBisa, baik mau kuliah di dalam negeri maupun luar negeri.
+
+    \n- Kapan bisa pindah kompre bila tidak sanggup melanjutkan skripsi atau di semester 8 belum di acc?
+    \nMengingat SK skripsi itu berlaku 6 bulan maka di awal semester 9 boleh pindah ke sidang kompre asal sudah memenuhi syarat.
+
+    \n- Apakah kalau lulus kompre bisa meneruskan S2?
+    \nBisa, baik mau kuliah di dalam negeri maupun luar negeri.
+
+    \n- Bagaimana cara menentukan pilihan matakuliah untuk sidang kompre?
+    \nSilahkan download [disini](http://hurna.staff.gunadarma.ac.id/Downloads) > Pilih 'Pelayanan Jurusan' dengan nama file 'Cara menentukan materi sidang bagi yang kompre'
+    "
+
+  utter_goodbye:
+  - text: "Sampai jumpa! Semoga jawaban tadi membantu yaa. Semangat!"
+
+  utter_iamabot:
+  - text: "Iya, Saya ini chatbot."
+
+  utter_diluar_topik:
+  - text: "Maaf Saya belum mengerti soal itu. Dan juga jangan sampai berkata kasar, SARA atau hal lain yang aneh-aneh yaa."
+
+  utter_coba_ulang:
+  - text: "Maaf Saya belum mengerti soal itu. Dan juga jangan sampai berkata kasar, SARA atau hal lain yang aneh-aneh yaa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

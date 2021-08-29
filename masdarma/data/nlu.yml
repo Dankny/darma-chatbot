@@ -1,0 +1,631 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hai
+    - mau tanya
+    - mau nanya nih 
+    - apa kabar? 
+    - selamat pagi
+    - selamat sore 
+    - selamat malam 
+    - met pagi 
+    - met siang 
+    - met malem 
+    - selamat siang 
+    - halo
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - makasih ya
+    - dah
+    - dadah
+    - sampai jumpa
+    - ok
+    - oke deh
+    - oh gitu
+    - terima kasih
+    - thanks
+    - tq 
+    - bye
+
+
+- intent: baak
+  examples: |
+    - baak
+    - apa itu baak?
+
+- intent: baak_administrasi_akademik
+  examples: |
+    - cuti akademik
+    - daftar ulang 
+    - tidak aktif kuliah 
+    - mahasiswa tidak aktif
+    - pengecekan nilai 
+    - pindah lokasi atau waktu kuliah
+    - pindah jurusan
+
+- intent: baak_perkuliahan_ujian
+  examples: |
+    - kalender akademik 
+    - daftar mata kuliah 
+    - daftar dosen wali kelas 
+    - koordinator mata kuliah
+    - daftar dosen pembimbing pi 
+    - cari jadwal kuliah
+    - cari jadwal ujian 
+    - ujian bentrok
+    - formulir rencana studi
+    - libur kuliah 
+    - uas ujian akhir semester
+    - uts ujian tengah semester
+    - terakhir mengisi krs
+
+- intent: baak_info_update
+  examples: |
+    - sidang 
+    - sidang pi 
+    - sidang skripsi
+    - sarjana s1 
+    - diploma d3
+
+- intent: baak_berita
+  examples: |
+    - berita baak
+    - Kelengkapan Data Mahasiswa Baru
+    - layanan loket baak 
+    - pengurusan 
+    - pemberitahuan 
+    - prosedur 
+    - perkuliahan
+    - team teaching
+    - Pemberitahuan tentang Cuti Akademik
+    - Bantuan Kuota Data Internet Tahun 2021
+    - Prosedur Pengurusan Non Aktif Akademik selama WFH
+
+- intent: baak_pedoman
+  examples: |
+    - buku pedoman penyusunan silabus
+    - buku pedoman penyusunan sap
+    - buku pedoman proses belajar mengajar
+    - buku pedoman pa & walikelas
+    - buku pedoman kemajuan belajar
+    - buku pedoman tata krama dosen
+    - buku pedoman tata krama mahasiswa
+    - materi ppsppt
+    
+- intent: baak_cari_mhs
+  examples: |
+    - cari mahasiswa baru
+    - nama mahasiswa baru 
+    - kelas mahasiswa baru 
+    - maba
+
+- intent: baak_cari_kelas_baru
+  examples: |
+    - cari kelas baru
+    - kelas tingkat 2 
+    - kelas mahasiswa kelas 2 
+    - daftar kelas baru
+
+- intent: sap 
+  examples: |
+    - sap
+    - apa itu sap 
+    - silabus 
+    - rencana pembelajaran semester 
+    - rps 
+    - Satuan Acara Perkuliahan
+
+- intent: sap_cari
+  examples: |
+    - cari sap 
+    - pencarian sap 
+    - sap mata kuliah
+
+- intent: daftar_sap
+  examples: |
+    - daftar sap 
+    - list sap 
+    - tabel sap 
+    - sap jurusan 
+
+
+- intent: staffsite 
+  examples: |
+    - daftar dosen mata kuliah 
+    - daftar staff 
+    - mencari dosen gunadarma
+    - staffsite ug 
+  
+- intent: input_nama 
+  examples: |
+    - bu [marliza]{"entity" : "nama_dosen"}
+    - pak [bima]{"entity" : "nama_dosen"}
+    - ibu [yuni]{"entity" : "nama_dosen"}
+    - bapak [ari]{"entity" : "nama_dosen"}
+    - dosen bernama [sulistyo]{"entity" : "nama_dosen"}
+    - [ary]{"entity" : "nama_dosen"} namanya
+    - [januar]{"entity" : "nama_dosen"}
+
+- lookup: nama_dosen
+  examples: |
+    - sulistyo
+    - yuni
+    - bima
+    - siti 
+    - MUSANA
+    - JANUAR
+    - RISKAYANTO
+    - WARDANI
+    - SAPUTRA
+    - MUHLI
+    - YUGIARTI
+    - YOSFIAH
+    - MARTODIWIRYO
+    - FATHULLAH
+    - SANTOSA
+    - RAMOS
+    - JEJE
+    - MARWAN
+    - SIDHIQ
+    - HARTIWATI
+    - PRASETYO
+    - KUNCARA
+    - KURNIAWAN
+    - HARTONO
+    - HERNAWAN
+    - SABRI
+    - WEDYA
+    - DOLLY
+    - MAHDIA
+    - RAMADONA
+    - YULIA
+    - RAKHMAWATI
+    - HENRY
+    - ZULHARFAN
+    - ROLLA
+    - APRIANTA
+    - DESKI
+    - WINDU
+    - DEDERIKA
+    - AGUSTIENA
+    - NOVIATI
+    - ROSMAYA
+    - SEPTIAJI
+    - SALIMAH
+    - ALBARSANY
+    - SATRIYO
+    - SYAHRIL
+    - BASARIA
+    - KURNIASIH
+    - RIZKI
+    - ROSLIYANA
+    - ANSHARI
+    - PRASODJO
+    - PRASETIANINGRUM
+    - SILVIANA
+    - SARTIKA
+    - ONGGO
+    - LINTANG
+    - KUNCORO
+    - LILY
+    - NURHAYATI
+    - HERDYAN
+    - SUDIK
+    - RAHMASYHARI
+    - RIRIN
+    - DAHLAN
+    - PURWANINGSIH
+    - PRANATA
+    - KRISMANTO
+    - WINATA
+    - WIDYO
+    - TJUTJU
+    - MINIK
+    - RAKACITA
+    - JESSICA
+    - ANGGORO
+    - PARLIANTO
+    - AINI
+    - ANDRI
+    - MEYSAWATI
+    - DIANASARI
+    - BETTY
+    - DJADJAI
+    - DJAMALUDIN
+    - JUWITA
+    - OCTARINI
+    - HAULIZA
+    - HASFI
+    - DARMAWATI
+    - JAMILAH
+    - DINAWAN
+    - NURULITA
+    - ARDIANTI
+    - RITANDIYONO
+    - ANANTO
+    - RATNASARI
+    - ERWIN
+    - WILLEM
+    - YUDHA
+    - IRWANSYAH
+    - SUNYOTO
+    - YUSMAN
+    - PERMATASARI
+    - PRIMA
+    - SAPUTRI
+    - HASYIM
+    - UTOMO
+    - ARLIDA
+    - LAMRIA
+    - ZAINUDDIN
+    - BHETA
+    - LARASATI
+    - TANAMAS
+    - HUBERTUS
+    - MIETA
+    - RAHMI
+    - RINALDI
+    - JUMHARIJINIS
+    - HIDAYATULAH
+    - JAUHARI
+    - ANGGRAINI
+    - HANUM
+    - PUTRAWAN
+    - INDIYAH
+    - NURDIYANI
+    - IZZANI
+    - HARMADI
+    - ANIEQ
+    - VIVTIA
+    - NOVITA
+    - LIGAR
+    - FAISAL
+    - TAUFIQ
+    - WARDA
+    - SALIM
+    - HARTANTO
+    - LIDYA
+    - MARTHASYA
+    - KAWAKIBI
+    - ALYAMIN
+    - SUARNI
+    - RAHARJO
+    - WULAN
+    - BUDIYONO
+    - FITHRI
+    - SILFESTER
+    - OCVITA
+    - YUDILLA
+    - EARLY
+    - WIJAYA
+    - JOHANNES
+    - CHANDRA
+    - SAYEKTI
+    - CAECILIA
+    - FUADI
+    - REKSOPRODJO
+    - MARDIYANTI
+    - SETIYOWATI
+    - MARLIZA
+    - SUGESTI
+    - KUMORO
+    - MUDJIB
+    - DAMAWATI
+    - NURLINAWATI
+    - FERAWATI
+    - AFFANDI
+    - NURLAYLI
+    - HADJON
+    - HADIYONO,
+    - MAROLOP
+    - PRAMANTHA
+    - HADIYANTO
+    - PURWITASARI,
+    - ASFARY
+    - RIZQI
+    - BAKTI
+    - ASWARINI
+    - TRIFOSA
+    - LIBRIA
+    - DHITA
+    - OENTARI
+    - SULISTYORINI,
+    - NURFITRI,
+    - ZAINAL
+    - HUSNA
+    - MADENDA
+    - BENEDICTUS
+    - TOPAN
+    - ZAKI,SKOM
+    - ARIFIEN
+    - DOSEBA
+    - GAYATRI
+    - AGUNG
+    - KUWAT
+    - ROHMAN
+    - CHOTIMAH
+    - FAHRUROZI
+    - PRIONO
+    - SIDIQ
+    - AJENG
+    - JULAEHA
+    - RANGGA
+    - HARSONO,
+    - FRANSISCUS
+    - SUHARDJO
+    - NOVIA
+    - HENNY
+    - TRINI
+    - RENIMINARYU
+    - ASTRIA
+    - BUNGA
+    - HADIR
+    - AYESHA
+    - NUNUK
+    - HARDIANTO,
+    - BASYIR
+    - PARWITASARI
+    - PULU
+    - HIDAYATULLAH,
+    - PARWA
+    - ABEDNEGO
+    - KARLA
+    - SUZANA
+    - SYAMSU
+    - WIDODO
+    - MONIKA
+    - HANIF
+    - PARNATA
+    - SUPYATI
+    - THALIB
+    - SUKOWATI
+    - RIDHO
+    - BINTARTI
+    - BINTANG
+    - DIYANTI
+    - FEBRIYANA
+    - SETYA
+    - NOERMILLIA
+    - DIAMONDDY
+    - SURYANTO
+    - SUGIANTO
+    - SEGORO
+    - WARMANSYAH
+    - SECIOLIVIA
+    - SAPTO
+    - ELLYSA
+    - HERRY
+    - HABIBIE
+    - YUSRIYAH
+    - AQWAM
+    - PATRIYA
+    - FIRAMDAN
+    - MARIANI
+    - AFRIYENNY
+    - NURHIDAYAT
+    - PRAYUDI
+    - RACHWATI
+    - MEUTIA
+    - VALENTINE
+    - ANNASSIA
+    - MASYHURI
+    - HOTLINA
+    - MELANIAWATI
+    - SARIYATI
+    - MAGHFIROH
+
+- intent: studentsite 
+  examples: |
+    - studentsite 
+    - loker mahasiswa
+    - situs untuk mahasiswa 
+    - Berita terkini untuk mahasiswa
+    - Daftar sidang
+    - Daftar ulang
+    - Membuat surat keterangan
+    - Membuat blog
+    - Membuat portofolio
+    - Mengakses SKPI
+    - Mengakses blanko pembayaran
+    - Mengisi KRS
+    - Informasi Akademik
+    - nilai ipk 
+    - nilai ips
+    - Informasi Kampus
+    - Mengubah Biodata
+    - semester pendek 
+    - ujian mandiri um
+
+- intent: studentsite_aktivasi
+  examples: |
+    - cara aktivasi akun studentsite 
+    - mengaktifkan akun studentsite 
+    - cara login studentsite mahasiswa baru maba
+
+- intent: studentsite_berita
+  examples: |
+    - aptitude tes
+    - pelaksanaan
+    - klasikal daring
+    - angkatan tahun 2020
+    - angkatan tahun 2017
+    - angkatan 2018
+    - diseminasi hasil karya 
+    - sosialisasi 
+    - seminar 
+    - kuliah umum
+    - lowongan
+    - ppmb 
+    - kompres labti
+    - national islamic economic 
+    - gsmg 
+    - open recruitment 
+    - pengarahan
+    - temu alumni
+    - pelaksaan ujian kompetensi
+    - workshop
+    - hackfest
+    - techno fair 
+    - bem 
+    - bem fikti 
+    - asisten
+    - asistant 
+    - Laboratoriium Manajemen Menengah
+    - penundaan
+    - lembaga pengembangan 
+    - surat edaran 
+    - pemutakhiran 
+    - data akademik 
+    - info 
+    - webinar 
+    - pendaftaran
+    - pelayanan loket
+    - pemberitahuan acara wisuda 
+    - pendaftaran sidang 
+    - lsp daring 
+    - kursus lsp 
+    - loket wisuda 
+    - pelaksanaan bantuan 
+
+
+- intent: web_ug
+  examples: |
+    - gunadarma 
+    - universitas gunadarma 
+    - gundar 
+    - informasi gundar 
+    - informasi gunadarma 
+    - website gundar 
+    - web ug 
+    - ug 
+    - website gunadarma 
+    - situs web gunadarma 
+    - situs web ug 
+    - situs web gundar 
+    - sejarah 
+    - visi misi
+    - struktur organisasi 
+    - rektor 
+    - wakil rektor
+
+- intent: link_web
+  examples: |
+    - daftar link Gunadarma
+    - list link gunadarma 
+    - daftar situs web resmi gunadarma 
+    - apa aja situs web yang ada di Gunadarma
+    - website yang ada di gunadarma 
+    - sumber informasi layanan
+    - ugpedia
+
+- intent: library
+  examples: |
+    - perpus 
+    - perpustakaan
+    - library
+    - petunjuk perpustakaan
+    - layanan perpustakaan 
+    - e-journal 
+    - jurnal 
+    - repositori 
+    - repository 
+    - repo 
+    - katalog buku
+    - peminjaman buku
+    - pengembalian buku 
+
+- intent: vclass
+  examples: |
+    - login vclass 
+    - vclass 
+    - website vclass 
+    - virtual class 
+  
+- intent: kemahasiswaan 
+  examples: |
+    - kemahasiswaan gunadarma 
+    - pembinaan mahasiswa 
+
+
+- intent: topik_kemahasiswaan 
+  examples: |
+    - beasiswa
+    - lomba
+    - internasional
+    - kip 
+    - prestasi ilmiah
+    - prestasi olahraga
+    - bidikmisi 
+    - kegiatan 
+    - wisuda
+    - pendaftaran
+    - sosialisasi
+    - pelaksanaan
+    - daring 
+    - kompetisi 
+    - pengumuman beasiswa 2021
+    - beasiswa 2020 
+    - kompetisi 2021 
+    - wisuda 2020 
+    - wisuda 2021 
+    - prestasi ilmiah 2021
+    - lomba 2021 
+    - kegiatan 2021 
+    - kompetisi 2021
+
+- intent: praktikum
+  examples: |
+    - praktikum 
+    - praktikan 
+    - ilab 
+    - laboratorium reguler
+    - labreg 
+    - lab reg 
+    - integrated laboratory
+
+- intent: loket23 
+  examples: |
+    - loket 23
+    - loket kursus 
+    - Lembaga Pengembangan UG
+    - LPUG 
+    - workshop 
+    - kursus
+    - bagaimana mengurus kursus di gundar
+
+- intent: pertanyaan_kompre
+  examples: |
+    - komprehensif atau kompre 
+    - Kapan bisa pindah kompre bila tidak sanggup melanjutkan skripsi atau di semester 8 belum di acc
+    - Bagaimana cara menentukan pilihan mata kuliah untuk sidang kompre
+    - Apa kalau lulus kompre bisa meneruskan S2
+
+- intent: pertanyaan_skripsi_proposal
+  examples: |
+    - Apa syarat mendapatkan SK Skripsi 
+    - Syarat mendapatkan surat keterangan 
+    - perubahan judul 
+    - kesalahan penulisan judul ijazah
+    - jika pernah ujian mandiri apa dapat sk skripsi
+    - apa boleh menentukan atau memilih dosen pembimbing dospem
+    - kapan sk skripsi turun
+    - form acc skripsi 
+    - mengajukan proposal 
+    - syarat sidang skripsi
+    - Bolehkah menolak skripsi di semester 8
+    
+- intent: bot_challenge
+  examples: |
+    - kamu bot ya?
+    - bot ya?
+    - aku ngobrol sama bot ya?
+    - bot?
+    - kamu chatbot?
+    

@@ -1,0 +1,27 @@
+version: '3'
+services: 
+  nginx:
+    container_name: "nginx"
+    image: nginx
+    volumes: 
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    depends_on: 
+      - rasa
+      - action_server
+    
+  rasa:
+    container_name: "rasa_server"
+    build: 
+      context: masdarma
+    ports:
+      - "5005:5005"
+  action_server:
+    container_name: "action_server"
+    build: 
+      context: masdarma/actions
+    volumes: 
+      - ./actions:/app/actions
+    ports:
+      - "5055:5055"

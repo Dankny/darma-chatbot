@@ -1,0 +1,23 @@
+version: "2.0"
+
+rules:
+
+- rule: Ucapkan sampai jumpa kapanpun pengguna ucapkan sampai jumpa
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Ucapkan 'Aku bot' ketika pengguna bertanya
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot 
+
+- rule: diluar topik
+  steps:
+  - intent: diluar_topik
+  - action: utter_diluar_topik
+
+- rule: pembahasan diluar topik
+  steps:
+  - intent: nlu_fallback
+  - action: utter_coba_ulang

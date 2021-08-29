@@ -1,0 +1,143 @@
+version: "2.0"
+
+stories:
+
+- story: greet 
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: baak 1 path
+  steps:
+  - intent: baak
+  - action: utter_baak 
+
+- story: baak 2 path
+  steps:
+  - intent: baak_administrasi_akademik
+  - action: action_baak_akademik
+
+- story: baak 3 path
+  steps:
+  - intent: baak_cari_kelas_baru
+  - action: utter_baak_cari_kelas_baru
+
+- story: baak 4 path
+  steps:
+  - intent: baak_cari_mhs 
+  - action: utter_baak_cari_mhs
+
+- story: baak 5 path
+  steps:
+  - intent: baak_perkuliahan_ujian
+  - action: utter_baak_perkuliahan_ujian
+
+- story: baak 6 path
+  steps:
+  - intent: baak_berita
+  - action: action_berita_baak
+
+- story: baak 7 path
+  steps:
+  - intent: baak_pedoman
+  - action: utter_baak_pedoman
+
+- story: baak 8 path
+  steps:
+  - intent: baak_info_update
+  - action: utter_baak_info_update
+
+- story: sap 1 path
+  steps:
+  - intent: sap 
+  - action: utter_sap
+
+- story: sap 2 path
+  steps:
+  - intent: sap_cari
+  - action: utter_sap_cari
+
+- story: sap 3 path
+  steps:
+  - intent: daftar_sap
+  - action: utter_daftar_sap
+
+- story: staffsite path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: staffsite
+  - action: utter_staffsite
+  - intent: input_nama
+    entities:
+      - nama_dosen : "bima"
+  - action: action_staffsite
+
+
+- story: studentsite path
+  steps:
+  - intent: studentsite
+  - action: utter_studentsite
+
+- story: studentsite_aktivasi path
+  steps:
+  - intent: studentsite_aktivasi
+  - action: utter_studentsite_aktivasi
+
+- story: studentsite_berita path
+  steps:
+  - intent: studentsite_berita
+  - action: action_studentsite
+
+- story: web_ug path
+  steps:
+  - intent: web_ug
+  - action: utter_web_ug
+
+- story: link_web path
+  steps:
+  - intent: link_web
+  - action: utter_link_web
+
+- story: library path
+  steps:
+  - intent: library
+  - action: utter_library
+
+- story: vclass path
+  steps:
+  - intent: vclass
+  - action: utter_vclass
+
+- story: kemahasiswaan path
+  steps:
+  - intent: kemahasiswaan
+  - action: utter_kemahasiswaan
+  - intent: topik_kemahasiswaan
+  - action: utter_topik_kemahasiswaan
+  - action: action_topik_kemahasiswaan
+
+- story: praktikum path
+  steps:
+  - intent: praktikum
+  - action: utter_praktikum
+
+- story: loket23 path 
+  steps:
+  - intent: loket23
+  - action: utter_loket23
+
+- story: pertanyaan-seputar-skripsi-proposal path 
+  steps:
+  - intent: pertanyaan_skripsi_proposal
+  - action: utter_pertanyaan_skripsi_proposal
+
+- story: pertanyaan-seputar-sidang-kompre path 
+  steps:
+  - intent: pertanyaan_kompre
+  - action: utter_pertanyaan_kompre
+
+- story: pamit path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye 
