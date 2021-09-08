@@ -1,12 +1,8 @@
 FROM rasa/rasa-sdk:2.6.0
 
-
-WORKDIR /app
-COPY ./app actions/requirements.txt 
-
 USER root 
 
 RUN pip3 install recognizers-text-suite 
-RUN pip3 install -r requirements.txt
+RUN pip3 install bs4 requests html2text 
 
 USER 1001
