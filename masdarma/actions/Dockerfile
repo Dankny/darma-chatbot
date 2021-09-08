@@ -1,7 +1,7 @@
-FROM rasa/rasa-sdk:latest
+FROM rasa/rasa-sdk:2.6.0
 
 USER root 
 
 RUN pip3 install recognizers-text-suite 
-RUN rasa run actions
+
 USER 1001

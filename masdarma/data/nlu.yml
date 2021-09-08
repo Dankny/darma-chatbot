@@ -336,15 +336,16 @@ nlu:
     - LIBRIA
     - DHITA
     - OENTARI
-    - SULISTYORINI,
-    - NURFITRI,
+    - SULISTYORINI
+    - NURFITRI
     - ZAINAL
     - HUSNA
     - MADENDA
     - BENEDICTUS
     - TOPAN
-    - ZAKI,SKOM
+    - ZAKI
     - ARIFIEN
+    - YUSUF
     - DOSEBA
     - GAYATRI
     - AGUNG
@@ -357,7 +358,7 @@ nlu:
     - AJENG
     - JULAEHA
     - RANGGA
-    - HARSONO,
+    - HARSONO
     - FRANSISCUS
     - SUHARDJO
     - NOVIA
@@ -369,11 +370,11 @@ nlu:
     - HADIR
     - AYESHA
     - NUNUK
-    - HARDIANTO,
+    - HARDIANTO
     - BASYIR
     - PARWITASARI
     - PULU
-    - HIDAYATULLAH,
+    - HIDAYATULLAH
     - PARWA
     - ABEDNEGO
     - KARLA
