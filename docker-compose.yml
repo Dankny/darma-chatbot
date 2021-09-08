@@ -20,7 +20,7 @@ services:
   action_server:
     container_name: "action_server"
     build: 
-      context: actions
+      context: masdarma/actions
     volumes: 
       - ./actions:/app/actions
     ports:
