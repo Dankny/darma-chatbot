@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
-judul = "tes aptitude"
+# judul = "tes aptitude"
 def berita_ss(judul):
     cari = judul.lower().split()
     format_data = []
